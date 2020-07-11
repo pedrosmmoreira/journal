@@ -6,14 +6,10 @@
     {% seo %}
     <link rel="stylesheet" href="/css/site.css">
   </head>
-  <body>
-    <section>
+  <body class="font-sans text-black leading-tight antialiased p-4">
+    {% include header.html %}
+    <section class="max-w-xl">
       {{ content }}
     </section>
-
-    {% if jekyll.environment == 'production' %}
-      {% include analytics.html %}
-    {% endif %}
   </body>
 </html>
-
