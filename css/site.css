@@ -7,17 +7,17 @@
 @import "_includes/syntax";
 
 /* Write your styles below this line. */
-p + p {
-  margin-top: 1rem;
-}
 
-p a {
-  @apply font-bold text-orange-700;
-
+a {
   text-decoration-thickness: .155em;
   text-underline-offset: 1.5px;
-  text-decoration: underline;
   text-decoration-skip-ink: all;
+}
+
+p  a {
+  @apply text-orange-700 font-semibold;
+
+  text-decoration: underline;
 }
 
 .highlight {

@@ -4,7 +4,7 @@ title:  "Extending Pundit with dedicated policies per user role"
 date:   2016-11-09
 categories: article
 category-icon: article
-tags: ruby, ruby-on-rails.
+tags: ruby ruby-on-rails
 permalink: /journal/:title
 ---
 I am a big fan of using Pundit for authorization. It is simple, easy to implement and extensible. On a recent project, we had to deal with multiple user roles and as such we were starting to get a quite complex policy object. In particular we had to start checking the type of user we had, leading to complex logic branches:

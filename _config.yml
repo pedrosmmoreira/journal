@@ -42,3 +42,8 @@ exclude:
   - netlify.toml
   - bin
   - .gitignore
+
+collections:
+  entry_tags:
+    title: Tags
+    output: true
