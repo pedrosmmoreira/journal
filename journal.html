@@ -10,7 +10,22 @@
     <ul>
       {% for post in site.posts %}
       {% capture category_icon %}{{post.category-icon}}_icon.html{% endcapture %}
-      <li>
+      <li class="mb-6">
+        {% if post.category == "link-post" %}
+        <div class="md:flex md:items-center">
+          {% include {{ category_icon }} %}
+          <div class="md:ml-6">
+            <h3 class="font-bold text-orange-700">
+              <a class="underline" href="{{ post.external-link }}">{{ post.title }}</a>
+            </h3>
+            <div class="text-sm text-gray-600 mb-2">
+              {{ post.date | date_to_string: "ordinal", "US" }}
+            </div>
+            <div class="text-sm">
+              {{ post.content }}
+            </div>
+          </div>
+        {% else %}
         <div class="md:flex md:items-center">
           {% include {{ category_icon }} %}
           <div class="md:ml-6">
@@ -24,6 +39,7 @@
               {% endfor %}
             </div>
           </div>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
