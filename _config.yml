@@ -15,6 +15,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-postcss
+  - jekyll-crosspost-to-medium
 
 # jekyll-seo-tag configuration
 author: "Pedro Moreira"
