@@ -17,13 +17,13 @@ plugins:
   - jekyll-postcss
 
 # jekyll-seo-tag configuration
-author: ""
-url: ""
-title: ""
-description: ""
+author: "Pedro Moreira"
+url: "https://pedrosmmoreira.com"
+title: "Pedro Moreira is a software developer and occasional writer"
+description: "Personal web site for Pedro Moreira - a software developer and occasional writer"
 twitter:
-  username: ""
-  card: ""
+  username: "@pedrosmmoreira"
+  card: "summary_large_image"
 logo: "path/to/image"
 
 
