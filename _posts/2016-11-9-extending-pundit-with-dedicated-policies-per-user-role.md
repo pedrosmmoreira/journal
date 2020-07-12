@@ -66,7 +66,7 @@ class AdminFooPolicy < ApplicationPolicy
 end
 {% endhighlight %}
 
-Since Pundit policies are based on a user and a record being passed in, or in the case of a Scope, a class name, we knew we had to provide some additional context in order for this to work. Passing additional arguments to the policy would help our case, since we needed a dynamic way of instantiating the correct policy object for each of our users. Our next port of call was to investigate how Pundit itself retrieves policy objects. We quickly found the answer in the `PolicyFinder` class.
+Since Pundit policies are based on a user and a record being passed in, or in the case of a Scope, a class name, we knew we had to provide some additional context in order for this to work. Passing additional arguments to the policy would not help our case, since we needed a dynamic way of instantiating the correct policy object for each of our users. Our next port of call was to investigate how Pundit itself retrieves policy objects. We quickly found the answer in the `PolicyFinder` class.
 
 Pundit checks if the passed in object responds to a instance or class policy_class method. Failing that it assigns the klass local variable to the objects model name or class and appends the value of SUFFIX, which is "Policy". Armed with this knowledge it becomes simple to implement our requirement: we need to wrap the object we pass to Pundit with something that responds to policy_class, returning the correct name of the policy to instantiate.
 
