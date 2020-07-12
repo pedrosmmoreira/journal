@@ -24,6 +24,10 @@ p  a {
   @apply my-6;
 }
 
+.content ul li {
+  @apply list-disc mb-6;
+}
+
 /* Write your styles above this line. */
 
 @tailwind utilities;
