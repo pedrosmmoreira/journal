@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     {% feed_meta %}
     {% seo %}
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/css/site.css">
   </head>
-  <body class="font-sans text-black leading-tight antialiased p-4">
+  <body class="antialised">
     {% include header.html %}
-    <section class="max-w-xl">
-      {{ content }}
-    </section>
+    <main class="relative">
+      <div class="mx-auto container">
+        {{ content }}
+      </div>
+    </main>
   </body>
 </html>
