@@ -28,6 +28,10 @@ p  a {
   @apply list-disc mb-6;
 }
 
+.content p {
+  @apply mb-6;
+}
+
 /* Write your styles above this line. */
 
 @tailwind utilities;
